@@ -35,6 +35,12 @@ impl Rectangle {
     }
 }
 
+
+/// Create three instances of Rectangle and a square
+/// and print if rect1 can hold the other two
+/// and print the area of the square
+/// and print the area, width and height of rect1
+
 fn main() {
     // instance of Rectangle
     let rect1 = Rectangle {

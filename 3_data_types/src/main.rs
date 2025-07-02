@@ -2,8 +2,13 @@
 // scalars (intergers, floating-points numbers, booleans, characters)
 // compound data types (tuples, arrays)
 // custom data types (structs, enums)
-
 //https://doc.rust-lang.org/book/ch03-02-data-types.html
+
+/// The main function demonstrates basic data types in Rust:
+/// - Iterates over an array and prints each element.
+/// - Destructures a tuple and prints each of its values.
+/// - Defines and uses a `User` struct, printing its fields.
+/// - Matches against an enum `Color` and prints the corresponding color.
 
 #[allow(unused)]
 fn main() {

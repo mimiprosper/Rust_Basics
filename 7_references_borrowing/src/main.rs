@@ -1,31 +1,37 @@
-// // ownership & functions
-// fn main() {
-//     let i = 5;
-//     call_int(i);
-//     println!("AFTER CALLING THE FUNCTION THE VALUE OF i: {}", i);
+// ✅ Example 1: Immutable Borrowing (Read Only)
+/// This function demonstrates immutable borrowing:
+/// - It creates a `String` instance with the value "Bitcoin".
+/// - It passes an immutable reference to `greet`, which just reads the value.
+/// - It prints the value of the `String` again, showing that it's still usable.
+fn greet(word: &String) {
+    println!("Hello, {}!", word); // just read, no ownership taken
+}
 
-//     let s = String::from("hello");
-//     call_string(s);
-//     // println!("AFTER CALLING THE FUNCTION THE VALUE OF s: {}", s);
-// }
+// ✅ Example 2: Mutable Borrowing (Read and Write)
+// This function demonstrates mutable borrowing:
+// - It creates a `String` instance with the value "Hello".
+// - It passes a mutable reference to `add_world`, which modifies the value.
+// - It prints the modified value, showing that it's still usable.
+fn add_world(text: &mut String) {
+    text.push_str(", world!"); // modify borrowed value
+}
 
-// // call call_int function
-// fn call_int(i: i32) {
-//     println!("i: {}", i);
-// }
 
-// fn call_string(s: String) {
-//     println!("s: {}", s);
-// }
+/// This is the main function
+///
+/// It demonstrates:
+/// - Immutable borrowing: `greet` takes an immutable reference to a `String`.
+/// - Mutable borrowing: `add_world` takes a mutable reference to a `String`.
+/// - The borrow checker ensures thread safety and prevents data races.
 
 fn main() {
-    let s1 = String::from("hello");
-    let len= calculate_length(s1);
-    println!("The length of {}", len);
+    let name = String::from("Bitcoin");
+    greet(&name); // borrow the value immutably
+    println!("Back in main: {}", name); // still usable here!
+
+    let mut message = String::from("Hello");
+    add_world(&mut message); // mutable borrow
+    println!("Final message: {}", message);
 }
 
-fn calculate_length(s: String) -> usize {
-    let string_length = s.len();
-    string_length
-}
 

@@ -1,14 +1,10 @@
-// #[derive(Debug)]
-// enum IPAddressKind {
-//    V4(String),
-//    V6(String)
-// }
+//enums are user defined types
 
-// fn main() {
-//    let home = IPAddressKind::V4(String::from("127.0.0.1"));
-//    let loopback = IPAddressKind::V6(String::from("::1"));
-//    println!("home = {:?}, loopback = {:?}", home, loopback);
-// }
+#[derive(Debug)]
+enum IPAddressKind {
+   V4(String),
+   V6(String)
+}
 
 // implementation with enums
 #[derive(Debug)]
@@ -37,4 +33,8 @@ fn main() {
     move_cursor.call();
     write.call();
     change_color.call();
+
+    let home = IPAddressKind::V4(String::from("127.0.0.1"));
+    let loopback = IPAddressKind::V6(String::from("::1"));
+    println!("home = {:?}, loopback = {:?}", home, loopback);
 }

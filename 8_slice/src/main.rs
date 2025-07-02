@@ -1,35 +1,43 @@
+// A slice is a reference to a part (a contiguous range) of a collection, like an array or a string.
+// It does not own the data — it just borrows it temporarily.
 
-// fn main() {
-//     // array of characters of fixed sized
-//     let arr = ['a', 'b', 'c', 'd', 'e'];
-//     let range: &[char] = &arr[1..3];
-//     println!("{:?}", range);
+/// Demonstrate slices of different types:
+/// - A slice of array of characters of fixed size
+/// - A slice of vector of integers
+/// - A slice of string
+/// - Slices with different syntax (shortcuts)
 
-//     // slice of vector of integers
-//     let vec: Vec<i32> = vec![10, 20, 30, 40, 50];
-//     let range = &vec[1..3];
-//     println!("{:?}", range);
+fn items() {
+    // array of characters of fixed sized
+    let arr = ['a', 'b', 'c', 'd', 'e'];
+    let range: &[char] = &arr[1..3];
+    println!("{:?}", range);
 
-//     // slice of string
-//     let s = String::from("Hello");
-//     let range = &s[1..3];
-//     println!("{:?}", range);
+    // slice of vector of integers
+    let vec: Vec<i32> = vec![10, 20, 30, 40, 50];
+    let range = &vec[1..3];
+    println!("{:?}", range);
 
-//     // slice short cut
-//     let s = String::from("Hello");
+    // slice of string
+    let s = String::from("Hello");
+    let range = &s[1..3];
+    println!("{:?}", range);
 
-//     let range = &s[1..];
-//     println!("{:?}", range);
+    // slice short cut
+    let s = String::from("Hello");
 
-//     let range = &s[..3];
-//     println!("{:?}", range);
+    let range = &s[1..];
+    println!("{:?}", range);
 
-//     let range = &s[..];
-//     println!("{:?}", range);
+    let range = &s[..3];
+    println!("{:?}", range);
 
-//     let range = &s[0..3];
-//     println!("{:?}", range);
-// }
+    let range = &s[..];
+    println!("{:?}", range);
+
+    let range = &s[0..3];
+    println!("{:?}", range);
+}
 
 fn main() {    
     let s1  = String::from("hello world");
@@ -55,5 +63,4 @@ fn first_word(s: &String) -> &str {
     // if no space is found return the whole string
     &s[..] 
   }
-
 

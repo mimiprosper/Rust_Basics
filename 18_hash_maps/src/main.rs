@@ -1,6 +1,14 @@
 // import hash map
 #![allow(unused)]
 use std::collections::HashMap;
+
+/// Demonstrates the creation and manipulation of HashMaps in Rust:
+/// - Creates a HashMap to store team scores and inserts key-value pairs.
+/// - Retrieves values from the HashMap using keys, with a default value if the key is not found.
+/// - Iterates over a HashMap storing programming languages and their rankings.
+/// - Demonstrates HashMap ownership by inserting key-value pairs.
+/// - Uses the `entry` API to insert a value only if the key doesn't exist.
+
 fn main() {
     let mut scores = HashMap::new();
     // Add values to the hash map using key-value pair

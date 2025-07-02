@@ -1,4 +1,43 @@
 // https://doc.rust-lang.org/book/ch03-05-control-flow.html
+/// This program demonstrates the use of loops in Rust.
+///
+/// It prints the elements of an array,
+/// the characters of a string,
+/// and the numbers from 1 to 5 (inclusive) to the console.
+
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+    for element in a {
+        println!("the value is: {element}");
+    }
+
+    let s = "hello world";
+    for c in s.chars() {
+        println!("{}", c);
+    }
+
+    for n in 1..5 {
+        println!("{}!", n);
+    }
+}
+
+
+
+
+// fizzbuzz
+// fn main() {
+//     for n in 1..100 {
+//         if n % 3 == 0 && n % 5 == 0 {
+//             println!("fizzbuzz");
+//         } else if n % 3 == 0 {
+//             println!("fizz");
+//         } else if n % 5 == 0 {
+//             println!("buzz");
+//         } else {
+//             println!("{}", n);
+//         }
+//     }
+// }
 
 // fn main() {
 // (if statement)
@@ -58,35 +97,4 @@
 //     };
 //     // println!("The result is {result}" );
 //     println!("The result is {}", result );
-// }
-
-fn main() {
-    let a = [10, 20, 30, 40, 50];
-    for element in a {
-        println!("the value is: {element}");
-    }
-
-    let s = "hello world";
-    for c in s.chars() {
-        println!("{}", c);
-    }
-
-    for n in 1..5 {
-        println!("{}!", n);
-    }
-}
-
-// fizzbuzz
-// fn main() {
-//     for n in 1..100 {
-//         if n % 3 == 0 && n % 5 == 0 {
-//             println!("fizzbuzz");
-//         } else if n % 3 == 0 {
-//             println!("fizz");
-//         } else if n % 5 == 0 {
-//             println!("buzz");
-//         } else {
-//             println!("{}", n);
-//         }
-//     }
 // }

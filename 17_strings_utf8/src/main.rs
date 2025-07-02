@@ -1,3 +1,11 @@
+
+/// Demonstrates various string operations in Rust:
+/// - Creates and appends to a mutable `String`.
+/// - Converts a string literal to a `String` and prints it.
+/// - Handles UTF-8 encoded strings.
+/// - Concatenates strings using `+` operator and `format!`.
+/// - Demonstrates string slicing and iterating over characters and bytes.
+/// - Concatenates multiple strings using both `+` operator and `format!`.
 fn main() {
     // create a string
     let mut s1 = String::from("hello");

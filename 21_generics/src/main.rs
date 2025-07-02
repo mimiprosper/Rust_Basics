@@ -37,15 +37,28 @@ struct Pair<T, U> {
 
 // method implementation
 impl<T, U> Pair<T, U> {
+/// Returns the new element of the pair.
     fn new(&self) -> &T {
         &self.x
         
     } 
+
+/// Returns the old element of the pair.
     fn old(&self) -> &U {
         &self.y
     }
 }
 
+
+/// This is the main function.
+///
+/// It demonstrates the use of generics in Rust.
+/// It first creates a vector of numbers and characters,
+/// then finds the largest element in the vector,
+/// and prints it out.
+/// It also creates a struct `Pair` with two generic types,
+/// and a method `new` that returns a reference to the first type,
+/// and a method `old` that returns a reference to the second type.
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
     let result = largest(&number_list);

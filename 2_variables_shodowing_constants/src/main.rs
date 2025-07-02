@@ -1,17 +1,15 @@
+
+/// This is the main function
+///
+/// It demonstrates the use of the `mut` keyword, shadowing, and constants.
+///
+/// # Examples
+///
+/// 
+
 fn main() {
-    // mut keyword make the value to change but the type would not change
-    // let mut x = 5;
-    // println!("The Result: {}", x);
-
-    // x = 6;
-    // println!("The Result: {}", x);
-
-    // x = "hello";
-    // println!("Print {}", x);
-
-
-
-    shadowing
+    
+    // shadowing
     let x = 5;
     println!("The Result: {}", x);
 
@@ -26,8 +24,6 @@ fn main() {
 
     let x = "hello";
     println!("Print {}", x);
-
-
 
     // constants
     const MAX_POINTS: u32 = 100_000;

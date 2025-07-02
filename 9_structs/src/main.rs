@@ -1,4 +1,5 @@
-// structs example
+// structs is the collecton of related data that can be 
+//used to represent something in your program
 struct User {
     name: String,
     email: String,
@@ -6,6 +7,12 @@ struct User {
     active: bool,
 }
 
+
+/// The main function demonstrates the creation and manipulation of `User` struct instances:
+/// - Initializes a mutable `user1` instance with specific fields and prints its details.
+/// - Modifies the `name` field of `user1` and prints the updated details.
+/// - Uses the `build_user` function to create another `User` instance, `user2`,
+///   and prints its details.
 fn main() {
     // create instance of struct
     let mut user1 = User {

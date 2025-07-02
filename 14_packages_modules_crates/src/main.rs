@@ -1,6 +1,8 @@
+// This shows how to import a module 
 use crate::garden::vegetables::Asparagus;
 mod garden;
 
+/// Prints a sample Asparagus plant to the console.
 fn main() {
     let plant = Asparagus {
         name: String::from("Green"),
@@ -9,3 +11,4 @@ fn main() {
 
     println!("Plant: {:?}", plant);
 }
+
